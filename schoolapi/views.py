@@ -13,12 +13,12 @@ from .permissions import IsEnrolled
 
 
 
-class SubjectListView(generics.ListAPIView):
+class SubjectListView(generics.ListCreateAPIView):
     queryset = Subject.objects.all()
     serializer_class = SubjectSerializer
 
 
-class SubjectDetailView(generics.RetrieveAPIView):
+class SubjectDetailView(generics.RetrieveDestroyAPIView):
     queryset = Subject.objects.all()
     serializer_class = SubjectSerializer
     

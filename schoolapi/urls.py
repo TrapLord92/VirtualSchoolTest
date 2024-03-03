@@ -9,7 +9,7 @@ router.register('courses', views.CourseViewSet,basename='course')
 
 urlpatterns = [
     url('views/', views.SubjectListView.as_view(), name='subject_list'),
-    url('detail/', views.SubjectDetailView.as_view(), name='subject_detail'),
+    url('details/', views.SubjectDetailView.as_view(), name='subject_detail'),
     url(r'^', include(router.urls)),
     
 ]
